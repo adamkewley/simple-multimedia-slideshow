@@ -1,0 +1,24 @@
+{
+  "name": "simple-multimedia-slideshow",
+  "main": "simple-multimedia-slideshow.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AdamK117/simple-multimedia-slideshow",
+  "authors": [
+    "Adam Kewley <adamk117@gmail.com>"
+  ],
+  "description": "Create a continually running slideshow from individual multimedia files (images, videos, other websites).",
+  "keywords": [
+    "SimpleMultimediaSlideshow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.0.0"
+  }
+}
