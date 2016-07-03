@@ -330,6 +330,9 @@ function SimpleMultimediaSlideshow(options) {
     log.onErrorMessageReceived(this.onError.trigger);
     log.onFeedbackMessgeReceived(this.onFeedback.trigger);
 
+    // Defined in simple-multimedia-slideshow.css
+    resolvedOptions.element.className = "simple-multimedia-slideshow";
+
     this.start = function() {
 	stopped = false;
 	self.onFeedback.trigger("Starting slideshow");

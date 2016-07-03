@@ -1,0 +1,35 @@
+/* Normalize out the usual offenders */
+
+.simple-multimedia-slideshow,
+.simple-multimedia-slideshow > * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Images are inserted as background images
+   into divs with .img-container set as its
+   class. This allows the image to scale 
+   properly in the parent container */
+
+.simple-multimedia-slideshow > .img-container {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Iframes are used for embedded websites
+    websites */
+.simple-multimedia-slideshow > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* This is a hack */
+.simple-multimedia-slideshow > video {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
