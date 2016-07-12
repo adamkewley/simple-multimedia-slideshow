@@ -1,7 +1,7 @@
 # simple-multimedia-slideshow
 Transition between images, videos, and other sites in a slideshow. Handles preloading and injecting content. [demo](http://www.adamkewley.com/files/foyer-slideshow/index.html)
 
-# Usage 
+# Usage
 
 `html`
 ```html
@@ -10,20 +10,20 @@ Transition between images, videos, and other sites in a slideshow. Handles prelo
 
 `your-javascript-file.js`
 ```javascript
-	var elementThatHousesSlideshow = document.getElementById("slideshow-here");
-	
-	var entries = [
-	    // Duration is in seconds
-		{ path: "relative-to-page/path", type: "website", duration: 10 },
-		{ path: "funny-cat.jpg", type: "image", duration: 5 },
-		{ path: "some-video.mp4", type: "video", duration: 50 }
-	];
+var elementThatHousesSlideshow = document.getElementById("slideshow-here");
 
-	var slideshow = new SimpleMultimediaSlideshow({
-		element: elementThatHousesSlideShow
-	});
+var entries = [
+  // Duration is in seconds
+  { path: "relative-to-page/path", type: "website", duration: 10 },
+  { path: "funny-cat.jpg", type: "image", duration: 5 },
+  { path: "some-video.mp4", type: "video", duration: 50 }
+];
 
-	slideshow.start();
+var slideshow = new SimpleMultimediaSlideshow({
+  element: elementThatHousesSlideShow
+});
+
+slideshow.start();
 ```
 
 ## Options
@@ -59,10 +59,10 @@ The duration to show the slide for, in milliseconds.
 
 ```javascript
 var slideshow = new SimpleMultimediaSlideshow({
-	// ...
-	onFeedback: function(feedbackMessage) {
-		console.log("FEEDBACK: " + feedbackMessage);
-	}
+  // ...
+  onFeedback: function(feedbackMessage) {
+    console.log("FEEDBACK: " + feedbackMessage);
+  }
 });
 ```
 
@@ -71,11 +71,11 @@ var slideshow = new SimpleMultimediaSlideshow({
 
 ```javascript
 var slideshow = new SimpleMultimediaSlideshow({
-	// ...
-	onError: function(errorMessage) {
-		console.log("ERROR OCCURED IN SLIDESHOW: " + errorMessage);
-		slideshow.stop();
-	}
+  // ...
+  onError: function(errorMessage) {
+    console.log("ERROR OCCURED IN SLIDESHOW: " + errorMessage);
+    slideshow.stop();
+  }
 });
 ```
 
@@ -84,9 +84,9 @@ var slideshow = new SimpleMultimediaSlideshow({
 
 ```javascript
 var slideshow = new SimpleMultimediaSlideshow({
-    // ...
-	onStopped: function() {
-		console.log("Slideshow was stopped");
-	}
+  // ...
+  onStopped: function() {
+    console.log("Slideshow was stopped");
+  }
 });
 ```

@@ -7,9 +7,9 @@
     border: 0;
 }
 
-/* Images are inserted as background images
-   into divs with .img-container set as its
-   class. This allows the image to scale 
+/* Images are inserted as the background images
+   of divs with .img-container set as their
+   class. This allows the image to scale
    properly in the parent container */
 
 .simple-multimedia-slideshow > .img-container {
@@ -27,7 +27,7 @@
     height: 100%;
 }
 
-/* This is a hack */
+/* TODO: Fix this mess, video scaling is broken atm */
 .simple-multimedia-slideshow > video {
     height: 100%;
     display: block;
