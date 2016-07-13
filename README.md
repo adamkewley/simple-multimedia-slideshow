@@ -1,5 +1,5 @@
 # simple-multimedia-slideshow
-Transition between images, videos, and other sites in a slideshow. Handles preloading and injecting content. [demo](http://www.adamkewley.com/files/foyer-slideshow/index.html)
+Transition between images, videos, and other sites in a slideshow. Handles preloading and injecting content. [demo](demo/demo.html)
 
 # Usage
 
