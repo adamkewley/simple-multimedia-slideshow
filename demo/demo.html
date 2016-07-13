@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- For the demo, make the slide fullscreen -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: #222222;
+      }
+
+      #slide-goes-here {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+
+    <!-- Slide's internal styling -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="../simple-multimedia-slideshow.css">
+  </head>
+
+  <body>
+    <div id="slide-goes-here"></div>
+
+    <!-- Fade effect -->
+    <script src="jquery.js"></script>
+
+    <!-- Library -->
+    <script src="../simple-multimedia-slideshow.js"></script>
+
+    <!-- Setup a slideshow -->
+    <script>
+    var slides = [
+      { path: "slides/slide-1.png", type: "image", duration: 10 },
+      { path: "slides/slide-2.jpg", type: "image", duration: 5 },
+      { path: "slides/slide-3.html", type: "webpage", duration: 10 },
+      // Source: http://techslides.com/sample-webm-ogg-and-mp4-video-files-for-html5
+      { path: "slides/slide-4.mp4", type: "video", duration: 10 },
+      { path: "slides/slide-5.gif", type: "image", duration: 5 },
+      { path: "http://adamkewley.com", type: "webpage", duration: 10 }
+    ];
+
+    var slideshow = new SimpleMultimediaSlideshow({
+      element: document.getElementById("slide-goes-here"),
+      entries: slides,
+      onError: function(errorMsg) { console.log("ERROR: " + errorMsg); },
+      onFeedback: function(feedbackMsg) { console.log("FEEDBACK: " + feedbackMsg); }
+    });
+
+    slideshow.start();
+    </script>
+  </body>
+</html>
